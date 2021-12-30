@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AEO-WH-8gQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--장르-->
+        <scene sceneID="I3y-dI-hKx">
+            <objects>
+                <tableViewController id="nUv-HR-ZUf" customClass="FirstViewController" customModule="MoneyTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="499-Jw-owe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="nUv-HR-ZUf" id="d9m-E0-0vQ"/>
+                            <outlet property="delegate" destination="nUv-HR-ZUf" id="Mmc-fn-UcU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="장르" id="sDe-TF-Czy"/>
+                    <connections>
+                        <outlet property="tableView0" destination="499-Jw-owe" id="2nv-2H-BxK"/>
+                        <segue destination="Uxo-EJ-c3y" kind="show" identifier="show1" id="4u7-0u-F4P"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UjU-vW-YxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1574" y="53"/>
+        </scene>
+        <!--Youtubers View Controller-->
+        <scene sceneID="IwV-Xl-toi">
+            <objects>
+                <viewController id="Uxo-EJ-c3y" customClass="YoutubersViewController" customModule="MoneyTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VRr-EK-1Wc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qf8-0W-ggy">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UlN-42-ygT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Qf8-0W-ggy" secondAttribute="bottom" id="8EI-i4-ay2"/>
+                            <constraint firstItem="Qf8-0W-ggy" firstAttribute="leading" secondItem="UlN-42-ygT" secondAttribute="leading" id="P04-tj-VuF"/>
+                            <constraint firstItem="Qf8-0W-ggy" firstAttribute="trailing" secondItem="UlN-42-ygT" secondAttribute="trailing" id="ZEw-7C-khG"/>
+                            <constraint firstItem="Qf8-0W-ggy" firstAttribute="top" secondItem="VRr-EK-1Wc" secondAttribute="top" id="sXC-PQ-KEr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fgd-xs-MbF"/>
+                    <connections>
+                        <outlet property="tableView2" destination="Qf8-0W-ggy" id="5ND-qT-gdE"/>
+                        <segue destination="oDH-lL-Vge" kind="show" identifier="show2" id="Jgc-rx-Ddn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Abz-Qj-989" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2391" y="785"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="s5d-yb-eyC">
+            <objects>
+                <viewController id="oDH-lL-Vge" customClass="VideoViewController" customModule="MoneyTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DH8-B1-LFx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fNK-PQ-Bge">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vOn-EZ-Kw0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fNK-PQ-Bge" firstAttribute="leading" secondItem="vOn-EZ-Kw0" secondAttribute="leading" id="JEO-m8-GXh"/>
+                            <constraint firstItem="fNK-PQ-Bge" firstAttribute="top" secondItem="DH8-B1-LFx" secondAttribute="top" id="Kru-jH-FSL"/>
+                            <constraint firstItem="fNK-PQ-Bge" firstAttribute="trailing" secondItem="vOn-EZ-Kw0" secondAttribute="trailing" id="oKC-HZ-IRZ"/>
+                            <constraint firstAttribute="bottom" secondItem="fNK-PQ-Bge" secondAttribute="bottom" id="tPK-IV-w85"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Amg-dJ-gNX"/>
+                    <connections>
+                        <outlet property="tableView3" destination="fNK-PQ-Bge" id="I4E-EH-0dy"/>
+                        <segue destination="WzU-ba-9cc" kind="show" identifier="show3" id="yHm-iD-4hM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mg6-Zu-mEe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1662" y="785"/>
+        </scene>
+        <!--Video Player-->
+        <scene sceneID="Zww-ZM-QuG">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="WzU-ba-9cc" customClass="VideoPlayer" customModule="MoneyTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZVk-6a-iEr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bY7-mK-7tH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wx2-cx-NI3" customClass="YTPlayerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="264"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwQ-Of-RUX">
+                                        <rect key="frame" x="0.0" y="272" width="414" height="264"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7xa-3H-gxQ">
+                                        <rect key="frame" x="0.0" y="544" width="414" height="264"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qWr-CQ-maX"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bY7-mK-7tH" firstAttribute="top" secondItem="qWr-CQ-maX" secondAttribute="top" id="Axo-jK-hcv"/>
+                            <constraint firstAttribute="bottom" secondItem="bY7-mK-7tH" secondAttribute="bottom" id="KIq-Uo-Dpq"/>
+                            <constraint firstAttribute="trailing" secondItem="bY7-mK-7tH" secondAttribute="trailing" id="eMY-VO-zOc"/>
+                            <constraint firstItem="bY7-mK-7tH" firstAttribute="leading" secondItem="qWr-CQ-maX" secondAttribute="leading" id="u22-Zg-QGz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2pS-Tj-OvB"/>
+                    <connections>
+                        <outlet property="playerView" destination="wx2-cx-NI3" id="SAs-Ly-fY7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="36M-Gm-umd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-926.08695652173924" y="784.82142857142856"/>
+        </scene>
+        <!--장르-->
+        <scene sceneID="SEi-vn-kMq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AEO-WH-8gQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="장르" image="tray.full.fill" catalog="system" id="bcb-m8-bRA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZbU-qU-dfP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nUv-HR-ZUf" kind="relationship" relationship="rootViewController" id="xMq-gh-wBm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GkJ-F6-FAB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2326" y="53"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tray.full.fill" catalog="system" width="128" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tWW-f2-UZ4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--찜목록-->
+        <scene sceneID="0DB-WT-R1s">
+            <objects>
+                <viewController id="5Lr-TH-LpW" customClass="TrayViewController" customModule="MoneyTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mbV-9D-6Qi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CQT-1k-CZa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bUu-8O-jtu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CQT-1k-CZa" secondAttribute="bottom" id="CEG-aL-5dm"/>
+                            <constraint firstItem="CQT-1k-CZa" firstAttribute="top" secondItem="mbV-9D-6Qi" secondAttribute="top" id="Ytm-Td-HiG"/>
+                            <constraint firstItem="CQT-1k-CZa" firstAttribute="trailing" secondItem="bUu-8O-jtu" secondAttribute="trailing" id="rMl-Ff-hmT"/>
+                            <constraint firstItem="CQT-1k-CZa" firstAttribute="leading" secondItem="bUu-8O-jtu" secondAttribute="leading" id="tSH-aN-j3v"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="찜목록" id="NQL-3Q-Y6I">
+                        <barButtonItem key="rightBarButtonItem" image="plus" catalog="system" id="lud-ha-T7O">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="plusPressed:" destination="5Lr-TH-LpW" id="OKI-D2-vFo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="trayTableView" destination="CQT-1k-CZa" id="XfQ-O1-TnB"/>
+                        <segue destination="q3X-VZ-2um" kind="show" identifier="trayShow" id="5VL-gc-ZqX"/>
+                        <segue destination="8zA-Bo-AGO" kind="show" identifier="webShow" id="OL4-5L-Byd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0gN-NM-tE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1654" y="967"/>
+        </scene>
+        <!--Video Player-->
+        <scene sceneID="qTu-KV-SZZ">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="q3X-VZ-2um" customClass="VideoPlayer" customModule="MoneyTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sHH-2Z-6kn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Jp7-7u-N4B">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMY-E5-haU" customClass="YTPlayerView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="269.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMf-Hd-cjp">
+                                        <rect key="frame" x="0.0" y="269.5" width="414" height="269"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bys-Or-pR0">
+                                        <rect key="frame" x="0.0" y="538.5" width="414" height="269.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PYV-aa-qp1"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Jp7-7u-N4B" firstAttribute="trailing" secondItem="PYV-aa-qp1" secondAttribute="trailing" id="HgV-vi-igr"/>
+                            <constraint firstItem="Jp7-7u-N4B" firstAttribute="leading" secondItem="PYV-aa-qp1" secondAttribute="leading" id="Wxf-LF-kWW"/>
+                            <constraint firstAttribute="bottom" secondItem="Jp7-7u-N4B" secondAttribute="bottom" id="dyj-RR-uif"/>
+                            <constraint firstItem="Jp7-7u-N4B" firstAttribute="top" secondItem="PYV-aa-qp1" secondAttribute="top" id="wpu-n3-Nyc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jOc-PP-kdl"/>
+                    <connections>
+                        <outlet property="playerView" destination="EMY-E5-haU" id="JCy-02-cue"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8TT-IW-IdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3068.115942028986" y="1118.9732142857142"/>
+        </scene>
+        <!--플레이리스트-->
+        <scene sceneID="1um-fy-KFd">
+            <objects>
+                <viewController id="EtP-XD-pzy" customClass="PlayListViewController" customModule="MoneyTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fyf-Sr-6Rq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="플레이리스트" id="yaf-DB-0ur">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Ku9-OK-6TU">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="listPlusPressed:" destination="EtP-XD-pzy" id="NCT-o2-Wf5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playListTableView" destination="fyf-Sr-6Rq" id="yKQ-bL-0e6"/>
+                        <segue destination="5Lr-TH-LpW" kind="show" identifier="showTray" id="04L-fV-YKU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tdt-PV-AMt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="731.8840579710145" y="966.96428571428567"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="ckV-L8-69V">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="8zA-Bo-AGO" customClass="WebViewController" customModule="MoneyTube" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2bk-VU-QNN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kiy-df-3Ep">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="LZV-ug-E5h">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ap-hm-YQR">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="back" id="Nul-8n-epj">
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <connections>
+                                            <action selector="back:" destination="8zA-Bo-AGO" id="9kZ-Jt-Zxh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="forward" id="EC5-8E-KM7">
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <connections>
+                                            <action selector="forward" destination="8zA-Bo-AGO" id="j07-aF-g88"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="qnf-4W-DqA"/>
+                                    <barButtonItem title="찜" id="ZR1-0I-Ixr">
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <connections>
+                                            <action selector="likeIt:" destination="8zA-Bo-AGO" id="Sgv-da-CgO"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Zxe-gb-MAj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zxe-gb-MAj" firstAttribute="bottom" secondItem="1Ap-hm-YQR" secondAttribute="bottom" id="4Jj-Ca-59g"/>
+                            <constraint firstItem="kiy-df-3Ep" firstAttribute="trailing" secondItem="Zxe-gb-MAj" secondAttribute="trailing" id="B6P-Fp-T1U"/>
+                            <constraint firstItem="LZV-ug-E5h" firstAttribute="leading" secondItem="Zxe-gb-MAj" secondAttribute="leading" id="LI6-Rz-6cn"/>
+                            <constraint firstItem="1Ap-hm-YQR" firstAttribute="top" secondItem="kiy-df-3Ep" secondAttribute="bottom" id="NG0-8f-AZM"/>
+                            <constraint firstItem="LZV-ug-E5h" firstAttribute="top" secondItem="Zxe-gb-MAj" secondAttribute="top" id="TLj-yY-00h"/>
+                            <constraint firstItem="1Ap-hm-YQR" firstAttribute="trailing" secondItem="Zxe-gb-MAj" secondAttribute="trailing" id="d0U-Zt-i55"/>
+                            <constraint firstItem="kiy-df-3Ep" firstAttribute="top" secondItem="LZV-ug-E5h" secondAttribute="bottom" id="kEK-ZQ-nxw"/>
+                            <constraint firstItem="kiy-df-3Ep" firstAttribute="leading" secondItem="Zxe-gb-MAj" secondAttribute="leading" id="mk1-Lf-C6d"/>
+                            <constraint firstItem="LZV-ug-E5h" firstAttribute="trailing" secondItem="Zxe-gb-MAj" secondAttribute="trailing" id="q5a-ky-fSb"/>
+                            <constraint firstItem="1Ap-hm-YQR" firstAttribute="leading" secondItem="Zxe-gb-MAj" secondAttribute="leading" id="zAr-ME-g0U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2nw-Ka-uRR"/>
+                    <connections>
+                        <outlet property="searchBar" destination="LZV-ug-E5h" id="v4W-On-eij"/>
+                        <outlet property="webView" destination="kiy-df-3Ep" id="0u8-u7-PbH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWc-uy-up3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3066.666666666667" y="458.70535714285711"/>
+        </scene>
+        <!--찜목록-->
+        <scene sceneID="VDg-Jr-Ng8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tWW-f2-UZ4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="찜목록" image="heart.fill" catalog="system" id="XT8-Tx-iRG"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xNx-hK-uMz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EtP-XD-pzy" kind="relationship" relationship="rootViewController" id="3ts-UE-mh9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Yp-kg-gul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.2608695652174" y="966.96428571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

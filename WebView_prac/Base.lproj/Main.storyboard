@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2hS-Ht-XZk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GHs-xB-YBB">
+            <objects>
+                <tabBarController id="2hS-Ht-XZk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Fi-Aw-fG4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemGroupedBackgroundColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemBlueColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MAg-o6-C3z" kind="relationship" relationship="viewControllers" id="6gc-gL-EZV"/>
+                        <segue destination="eGl-Kl-Qqa" kind="relationship" relationship="viewControllers" id="ise-GH-KCY"/>
+                        <segue destination="M1S-H1-kan" kind="relationship" relationship="viewControllers" id="qtd-GD-CkY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6T-ha-3UV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1602" y="-2"/>
+        </scene>
+        <!--Genre-->
+        <scene sceneID="tZV-BN-1My">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Genre" id="MAg-o6-C3z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5oz-bt-rev"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WnD-9g-c9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1779" y="593"/>
+        </scene>
+        <!--Etc-->
+        <scene sceneID="PC8-Zm-XOi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Etc" id="M1S-H1-kan" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="2WE-bp-gvO"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B81-ln-ceS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1374" y="593"/>
+        </scene>
+        <!--Tray-->
+        <scene sceneID="xHb-AH-kDD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tray" id="eGl-Kl-Qqa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="3kd-0O-TZQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5J0-h7-jlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1602" y="593"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2hS-Ht-XZk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--보관함-->
+        <scene sceneID="IGI-8z-mjm">
+            <objects>
+                <viewController id="boE-ub-iqy" customClass="SecondViewController" customModule="WebView_prac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mX1-81-WC2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2z0-Xx-WPY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="보관함" image="star.fill" catalog="system" id="S3J-oV-5vU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUx-Aj-YQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1214" y="775"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GHs-xB-YBB">
+            <objects>
+                <tabBarController id="2hS-Ht-XZk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Fi-Aw-fG4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" systemColor="systemGroupedBackgroundColor"/>
+                        <color key="selectedImageTintColor" systemColor="systemBlueColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="MAg-o6-C3z" kind="relationship" relationship="viewControllers" id="6gc-gL-EZV"/>
+                        <segue destination="boE-ub-iqy" kind="relationship" relationship="viewControllers" id="LJY-Yu-IaK"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qtd-GD-CkY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6T-ha-3UV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1602" y="-2"/>
+        </scene>
+        <!--기타-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ThirdViewController" customModule="WebView_prac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Io-Aq-Mob" customClass="YTPlayerView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="237"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5Io-Aq-Mob" secondAttribute="bottom" constant="576" id="8U1-Qh-bzC"/>
+                            <constraint firstItem="5Io-Aq-Mob" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="FYr-XF-2tj"/>
+                            <constraint firstAttribute="trailing" secondItem="5Io-Aq-Mob" secondAttribute="trailing" id="Pze-gT-O44"/>
+                            <constraint firstItem="5Io-Aq-Mob" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eLu-Sm-Mgf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="기타" image="square.fill" catalog="system" id="l8q-v7-Kqn"/>
+                    <connections>
+                        <outlet property="youtubePlayer" destination="5Io-Aq-Mob" id="1aR-gg-QgB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-178.2608695652174" y="774.77678571428567"/>
+        </scene>
+        <!--Genre-->
+        <scene sceneID="tZV-BN-1My">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Genre" id="MAg-o6-C3z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="5oz-bt-rev"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WnD-9g-c9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2325" y="775"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.fill" catalog="system" width="128" height="114"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

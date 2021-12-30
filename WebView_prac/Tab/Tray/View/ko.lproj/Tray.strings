@@ -1,0 +1,21 @@
+
+/* Class = "UIBarButtonItem"; title = "forward"; ObjectID = "EC5-8E-KM7"; */
+"EC5-8E-KM7.title" = "forward";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "Ku9-OK-6TU"; */
+"Ku9-OK-6TU.title" = "Item";
+
+/* Class = "UINavigationItem"; title = "찜목록"; ObjectID = "NQL-3Q-Y6I"; */
+"NQL-3Q-Y6I.title" = "찜목록";
+
+/* Class = "UIBarButtonItem"; title = "back"; ObjectID = "Nul-8n-epj"; */
+"Nul-8n-epj.title" = "back";
+
+/* Class = "UITabBarItem"; title = "찜목록"; ObjectID = "XT8-Tx-iRG"; */
+"XT8-Tx-iRG.title" = "찜목록";
+
+/* Class = "UIBarButtonItem"; title = "찜"; ObjectID = "ZR1-0I-Ixr"; */
+"ZR1-0I-Ixr.title" = "찜";
+
+/* Class = "UINavigationItem"; title = "플레이리스트"; ObjectID = "yaf-DB-0ur"; */
+"yaf-DB-0ur.title" = "플레이리스트";
